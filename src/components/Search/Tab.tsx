@@ -15,7 +15,7 @@ const Tab = (props:{title:string,img:string,deal:string,active:boolean}) => {
         [@media(max-width:431px)]:text-center
 
         `}>
-        <img src={props.img} alt="" className="mx-auto lg:m-0 lg:w-[24px] [@media(max-width:431px)]:w-[20px]"/>
+        <img src={props.img} alt="" className="mx-auto lg:m-0 md:w-[24px] [@media(max-width:431px)]:w-[20px]"/>
         {props.title}
         {props.deal && <p className="absolute top-0 md:right-0 px-1 bg-red-500 rounded-2xl md:text-xs text-white font-semibold [@media(max-width:431px)]:text-[6px] [@media(max-width:431px)]:right-[16px]">{props.deal}</p> }
     </li>   

@@ -8,7 +8,7 @@ import images from "../../Images.jsx" ;
 
 const Content = () => {
     return (
-        <div className="lg:w-[980px] md:w-full mx-auto my-10">
+        <div className="lg:w-[980px] md:w-full mx-auto my-10 px-4">
             <h1 className="text-medium text-2xl pb-4 [@media(max-width:431px)]:text-[16px] [@media(max-width:431px)]:ps-2">Tuyến đường phổ biến</h1>
             <div className='flex gap-3 relative' >
                 <Place 
@@ -30,12 +30,14 @@ const Content = () => {
                 backgound="color-red" 
                 price="Từ 200.000đ" 
                 img={place3}
+                hidden={true}
                 />
                 <Place 
                 title="Sài Gòn - Phan Thiết" 
                 backgound="color-blue" 
                 price="Từ 150.000đ" 
                 img={place4}
+                hidden={true}
                 />
 
                 <Button position="right-3 bg-white" icon={images.icon1} />

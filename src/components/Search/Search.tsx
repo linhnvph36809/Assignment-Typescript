@@ -21,7 +21,7 @@ const Search = (props:{check:string}) =>{
         [@media(max-width:431px)]:w-[380px]
         [@media(max-width:431px)]:p-3
         `}>
-            <ul className="flex lg:justify-center border-b-2 border-solid border-[#E0E0E0]">
+            <ul className="flex justify-center border-b-2 border-solid border-[#E0E0E0]">
                 <Tab title="Xe khách" img={tab1} active={true} />
                 <Tab title="Máy bay" img={tab2} deal="-20K" />
                 <Tab title="Tàu hỏa" img={tab3} deal="Mới" />
@@ -32,8 +32,8 @@ const Search = (props:{check:string}) =>{
                 <div className="lg:flex items-center justify-between pt-4 gap-4">
                     <div className="lg:w-10/12 md:w-full lg:flex  justify-between items-center rounded-lg place">
                         <Place title="Nơi xuất phát" body="Hà Nội" img={search1} />
-                        <Place title="Nơi xuất phát" body="Hà Nội" img={search2} />
-                        <Place title="Nơi xuất phát" body="Hà Nội" img={search3} />
+                        <Place title="Nơi đến" body="Bắc Yên - Sơn La" img={search2} />
+                        <Place title="Ngày đi" body="T2, 18/03/2024" img={search3} />
                         <div className="w-3/12 flex items-center gap-3 py-4 px-6 justify-center md:hidden lg:block [@media(max-width:431px)]:hidden">
                             <div className="flex gap-2 items-center">
                                 {props.check == "detail" && <span className="text-sm font-normal text-[#2474E5]">add</span>}

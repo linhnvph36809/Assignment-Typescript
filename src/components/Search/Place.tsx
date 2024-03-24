@@ -8,10 +8,10 @@ const Search = (props: {title:string,body:string,img:string}) =>{
         md:border-[#E0E0E0]
         lg:border-none
         `}>
-        <img src={props.img} alt="" className="md:w-[24px] [@media(max-width:431px)]:w-[20px]" />
+        <img src={props.img} alt="" className="md:w-[24px] [@media(max-width:431px)]:w-[18px]" />
         <div>
             <span className="text-xs font-normal text-gray-400 [@media(max-width:431px)]:text-[8px]">{props.title}</span>
-            <p className="lg:text-base md:text-xs font-medium [@media(max-width:431px)]:text-[10px]">{props.body}</p>
+            <p className="lg:text-[15px] md:text-xs font-medium [@media(max-width:431px)]:text-[10px]">{props.body}</p>
         </div>
         </div>
     )

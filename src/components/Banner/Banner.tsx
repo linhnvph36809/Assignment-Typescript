@@ -14,7 +14,7 @@ const Banner = () => {
                 <ul className="flex lg:justify-center lg:gap-16 lg:py-5 md:py-2 md:justify-around [@media(max-width:431px)]:justify-around">
                     <Pod title="Chắc chắn có chỗ" img={images.pob1} />
                     <Pod title="Hỗ trợ 24/7" img={images.pob2} />
-                    <Pod title="Nhiều ưu đãi" img={images.pob2} />
+                    <Pod title="Nhiều ưu đãi" img={images.pob3} />
                     <Pod title="Thanh toán đa dạng" img={images.pob4} />
                 </ul>
             </div>

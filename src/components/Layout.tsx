@@ -1,7 +1,7 @@
 import Header from './Header/Header.tsx' ; 
 import Footer from './Footer/Footer.tsx' ; 
 import { Outlet } from "react-router-dom";
-const Container = () => {
+const Layout = () => {
     return (
         <>
         <Header /> 
@@ -11,4 +11,4 @@ const Container = () => {
     )
 }
 
-export default Container ; 
+export default Layout ; 

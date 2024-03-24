@@ -33,7 +33,7 @@ const images = {
     <g clip-path="url(#clip0_1_464)">
     <g clip-path="url(#clip1_1_464)">
     <g clip-path="url(#clip2_1_464)">
-    <mask id="mask0_1_464" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="0" y="0" width="25" height="24">
+    <mask id="mask0_1_464" maskUnits="userSpaceOnUse" x="0" y="0" width="25" height="24">
     <path d="M24.25 0H0.25V24H24.25V0Z" fill="white"/>
     </mask>
     <g mask="url(#mask0_1_464)">
