@@ -12,7 +12,7 @@ const Checkout = () => {
           <form action="#" className="space-y-4">
             <div>
               <label className="sr-only" htmlFor="name">
-                Name 12312
+                Name
               </label>
               <input
                 className="w-full rounded-lg border-2 border-gray-200 p-3 text-sm"
