@@ -10,9 +10,9 @@ const Header = () =>{
             <div className="flex items-center gap-16">
                 <div className="md:hidden lg:block [@media(max-width:431px)]:hidden">
                 <ul className="flex items-center gap-7">
-                    <Navbar title="Quản lý đơn hàng" />
-                    <Navbar title="Mở bán vé trên Vexere" />
-                    <Navbar title="Trở thành đối tác" />
+                    <Navbar title="Quản lý đơn hàng" href="/pay"/>
+                    <Navbar title="Mở bán vé trên Vexere" href="/detail" />
+                    <Navbar title="Trở thành đối tác" href="#"/>
                 </ul>
                 </div>
                 <div className="flex gap-4">

@@ -5,7 +5,7 @@ import images from "../../Images.jsx";
 const Banner = () => {
     return (
         <div className="relative banner">
-            <img src="./src/assets/images/banner.jpg" alt="" />
+            <img src="./src/assets/images/banner.jpg" alt="" className="w-full" />
             <div className="absolute top-2/4 left-2/4 -translate-x-1/2  -translate-y-1/2">
                 <h1 className="text-white py-5 text-xl tracking-wider text-center [@media(max-width:431px)]:text-xs">Vexere - Cam kết hoàn 150% nếu nhà xe không giữ chỗ</h1>
                 <Search check="banner"/> 
