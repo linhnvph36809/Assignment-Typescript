@@ -1,4 +1,5 @@
 import Time from "./Time.tsx";
+import {Link} from "react-router-dom" ; 
 
 const Ticket = (
     props: {
@@ -6,6 +7,7 @@ const Ticket = (
         price:string,
         chair:string,
         img:string,
+        id: string,
         times:{timeGo:string,placeGo:string,timeTo:string,placeTo:string}}) => {
     return (
         <div className="w-full bg-[#fff] px-4 pt-10 pb-5 rounded-md border-[1px] border-solid border-[#E0E0E0] mb-5">
@@ -40,7 +42,7 @@ const Ticket = (
                             </svg>
                             <div>
                                 <Time time={props.times.timeGo} place={props.times.placeGo} />
-                                <span className="lg:text-sm font-normal text-[#707070] [@media(max-width:431px)]:text-[10px]">1h30m</span>
+                                <span className="lg:text-sm font-normal text-[#707070] [@media(max-width:431px)]:text-[10px]">Khoảng 1h30m</span>
                                 <Time time={props.times.timeTo} place={props.times.placeTo} />
                             </div>
                         </div>
@@ -66,7 +68,7 @@ const Ticket = (
                     </div>
 
                     <p className="lg:text-sm font-normal text-[#707070] text-end [@media(max-width:431px)]:text-[10px]">{props.chair}</p>
-                    <button className="lg:w-[118px] bg-[#FFC700] text-sm font-medium border-0 py-2 rounded [@media(max-width:431px)]:w-[80px] [@media(max-width:431px)]:text-[10px] [@media(max-width:431px)]:py-1">Chọn chuyến</button>
+                    <Link to={`/pay/${props.id}`} className="block text-center lg:w-[118px] bg-[#FFC700] text-sm font-medium border-0 py-2 rounded [@media(max-width:431px)]:w-[80px] [@media(max-width:431px)]:text-[10px] [@media(max-width:431px)]:py-1">Chọn chuyến</Link >
                 </div>
             </div>
             <h3 className="lg:text-sm font-semibold mt-5 text-end uppercase [@media(max-width:431px)]:hidden">Không cần thanh toán trước</h3>

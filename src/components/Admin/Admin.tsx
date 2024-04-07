@@ -1,24 +1,22 @@
 import Header from "./Header" ; 
-import Tab from "./Tab";
+import Slibar from "./Slibar";
 import { Outlet } from "react-router-dom";
 const Admin = () => {
+    const userDataString = sessionStorage.getItem("user");
+    const isUser = userDataString ? JSON.parse(userDataString) : false;
+
     return (
-        <div className="w-[1440px] mx-auto">
+        <>
+        {isUser && isUser?.role === true ? <div className="w-[1440px] mx-auto">
         <Header />
         <div className="flex gap-10 min-h-[1068px]">
-            <div className="md:w-3/12 bg-[#F2F2F2] border-[1px] border-[#000] border-solid px-2">
-                <ul>
-                    <Tab title="Dashboard"/>
-                    <Tab title="Lịch sử chuyến" active/>
-                    <Tab title="Chuyến xe"/>
-                    <Tab title="Nhà xe"/>
-                </ul>
-            </div>
+            <Slibar /> 
             <div className="md:w-9/12">
                 <Outlet />
             </div>
         </div>
-        </div>
+        </div> : <h1>404 Not found </h1>}
+        </>
     )
 }
 

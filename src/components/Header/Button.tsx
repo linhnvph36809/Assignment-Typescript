@@ -1,7 +1,8 @@
-const Button = (props:{title:string}) =>{
+import {Link} from "react-router-dom";
+const Button = (props:{title:string,to:string}) =>{
     return (
         <>
-        <button className="bg-white px-4 py-2 rounded-md text-sm font-medium [@media(max-width:431px)]:hidden">{props.title}</button>
+        <Link to={props.to} className="bg-white px-4 py-2 rounded-md text-sm font-medium [@media(max-width:431px)]:hidden">{props.title}</Link>
         </>
     )
 }
