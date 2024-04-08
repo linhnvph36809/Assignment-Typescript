@@ -6,6 +6,12 @@ export const getTrips = () => {
     return data
 }
 
+export const getTripsLimit = () => {
+    const data = instance.get("/tripslimit")
+    return data
+}
+
+
 
 export const postTrips = (data: ITrip) => {  
     return instance.post("/trips",data)

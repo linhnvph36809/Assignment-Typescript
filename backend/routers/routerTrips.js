@@ -8,12 +8,14 @@ import {
     searchTripsOneHour,
     tripsHistory,
     getTripsTime,
-    deleteTrip
+    deleteTrip,
+    getTripsLimit
 } from '../controllers/Trips.js';
 
 const router = express.Router() ; 
 router.get("/trips",getTripsDetail) ; 
 router.get("/trips/:id",getTripsOne) ; 
+router.get("/tripslimit",getTripsLimit) ; 
 router.get("/searchTrips",searchTrips) ; 
 router.get("/tripshistory",tripsHistory) ; 
 router.get("/tripsTime",getTripsTime) ; 

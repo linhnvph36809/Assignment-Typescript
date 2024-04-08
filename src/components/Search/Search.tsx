@@ -39,8 +39,7 @@ const Search = (props: { check: string }) => {
     } = useForm<SearchTripForm>()
 
     const onSubmit: SubmitHandler<SearchTripForm> = async (data) => {
-        console.log(data);
-         navigate(`/detail?from=${data.fromStation}&to=${data.toStation}&date=${data.startTime}`)
+        navigate(`/detail?from=${data.fromStation}&to=${data.toStation}&date=${data.startTime}`)
      }
 
 

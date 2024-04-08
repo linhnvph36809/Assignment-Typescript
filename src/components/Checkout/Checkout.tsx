@@ -24,6 +24,15 @@ const Checkout = () => {
     })()
   }, [])
 
+  function validateDate(email: string){
+    const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+    return emailRegex.test(email) || "Email không đúng định dạng!";
+  }
+
+  const validatePhoneNumber = (phoneNumber:string) => {
+    const phoneNumberRegex = /^(0|\+84)(3[2-9]|5[689]|7[06-9]|8[1-9]|9[0-9])\d{7}$/;
+    return phoneNumberRegex.test(phoneNumber) || "Số điện thoại sai định dạng!" ;
+  };
 
   const {
     register,
@@ -99,7 +108,7 @@ const Checkout = () => {
             <label htmlFor="" className="block pb-2 md:text-sm font-medium text-[#484848] [@media(max-width:431px)]:text-xs">Email</label>
             <input type="email" 
             {
-              ...register("email",{ required: "Vui lòng nhập email" })
+              ...register("email",{ required: "Vui lòng nhập email",validate: {date: v => validateDate(v) }})
               } 
                className="w-full h-[42px] rounded-md px-5 border-[1px] border-solid border-[#ccc]" />
           {errors.email?.message && <p className="my-2 text-red-500 text-xs" >{errors.email?.message}</p>}
@@ -109,7 +118,7 @@ const Checkout = () => {
             <label htmlFor="" className="block pb-2 md:text-sm font-medium text-[#484848] [@media(max-width:431px)]:text-xs">Số điện thoại</label>
             <input type="number" 
             {
-              ...register("phone",{ required: "Vui lòng nhập số điện thoại" })
+              ...register("phone",{ required: "Vui lòng nhập số điện thoại",validate: {date: v => validatePhoneNumber(v) } })
               } 
              className="w-full h-[42px] rounded-md px-5 border-[1px] border-solid border-[#ccc]" />
           {errors.phone?.message && <p className="my-2 text-red-500 text-xs" >{errors.phone?.message}</p>}

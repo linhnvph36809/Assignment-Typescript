@@ -569,4 +569,4 @@ export const CITY_VN =  [
         }
       ]
 
-      
+export const COLOR = ['color-brown','color-purple','color-red','color-blue']

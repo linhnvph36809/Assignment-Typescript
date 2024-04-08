@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import moment from "moment";
 import Button from "../Button";
 import Heading from "../Heading";
 import Text from "../Text";
@@ -35,7 +36,7 @@ const TripHistory = () => {
                 </div>
                 <div className="flex justify-between items-center my-10">
                     <div className="w-8/12">
-                        <Text title="Khởi hành:" text={trip.startTime} />
+                        <Text title="Khởi hành:" text={moment(trip.startTime).format("DD-MM-YYYY-HH:mm")} />
                     </div>
                     <div className="w-4/12">
                         <Text title="Bến xe :" text={trip.stationId?.name} />

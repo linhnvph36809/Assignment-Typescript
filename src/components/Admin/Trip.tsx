@@ -7,8 +7,6 @@ import Button from "./Button";
 import Heading from "./Heading";
 import Text from "./Text";
 const Trip = () => {
-    const navigate = useNavigate() ; 
-
     const [trips, setTrips] = useState([{}]);
 
     useEffect(() => {
@@ -49,7 +47,8 @@ const Trip = () => {
                     <option className="text-base font-medium" value="30">1 tháng tiếp theo</option>
                 </select>
             </div>
-            {trips && trips.length > 0 ? trips.map((trip) => <div key={trip._id} className="py-5 px-10 rounded-lg bg-[#f2f2f2] border-[1px] border-solid border-[#969696] mt-5 mb-12">
+            {trips && trips.length > 0 ? trips.map((trip,index) => 
+            <div key={index} className="py-5 px-10 rounded-lg bg-[#f2f2f2] border-[1px] border-solid border-[#969696] mt-5 mb-12">
                 <div className="flex justify-end gap-3">
                 <Link to={`/admin/trip/${trip._id}`} className="text-end block underline hover:text-[#2474E5]">Cập nhật</Link>
                 <p className="underline hover:text-[#2474E5] hover:cursor-pointer" onClick={() => handleDelete(trip._id)}>Xóa</p>

@@ -15,7 +15,7 @@ const Admin = () => {
                 <Outlet />
             </div>
         </div>
-        </div> : <h1>404 Not found </h1>}
+        </div> : <h1 className='text-center py-5 text-2xl font-bold'>404 Not found </h1>}
         </>
     )
 }

@@ -28,7 +28,7 @@ const SignIn = () => {
             }
 
         } catch (error) {
-            alert("Đăng ký thất bại !");
+            alert("Đăng nhập không thành công !");
         }
     }
 

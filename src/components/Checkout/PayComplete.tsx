@@ -74,7 +74,7 @@ const PayComplete = () => {
                 <h3 className='text-[#2474E5] font-medium'>{message}</h3>
             </div>
         </div> 
-        : <h1>Not found</h1> }
+        : <h1 className='text-center py-5 text-2xl font-bold'>404 Not Found</h1> }
         </>
     )
 }

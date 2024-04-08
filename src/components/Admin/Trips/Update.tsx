@@ -1,12 +1,12 @@
 import { useForm, SubmitHandler } from "react-hook-form";
-import { Link } from "react-router-dom";
+import { Link,useNavigate } from "react-router-dom";
 import Heading from "../Heading";
 import Input from "../Input";
 import { putTrip } from "../../../api/trips.api";
 import { useEffect, useState } from "react";
 import { getStation } from "../../../api/station.api";
 import { getBushouses } from "../../../api/busHouses.api";
-import { useNavigate, useLoaderData } from "react-router-dom";
+import { useLoaderData } from "react-router-dom";
 import { ITrip } from "../../../interface/trip";
 import { validateDate } from "../../../Dates/Trip";
 import { CITY_VN } from "../../../constants/constants";
@@ -24,11 +24,8 @@ type AddTripForm = {
 }
 
 const Update = () => {
-    const navigate = useNavigate();
     const trip = useLoaderData() as { trip: ITrip }
-    if (Object.keys(trip).length === 0) {
-        navigate("/admin")
-    }
+    const navigate = useNavigate() ;
     const [location, setLocation] = useState({});
 
     useEffect(() => {
@@ -66,6 +63,9 @@ const Update = () => {
 
     return (
         <>
+        {
+            Object.keys(trip).length === 0 ? <h1 className='text-center py-5 text-2xl font-bold'>404 Not Found</h1> :
+            <>
             <Heading title="Cập nhật chuyến xe" />
             <Link to="/admin/trip" className="inline-block flex items-center gap-2 py-3">
                 <svg width="7" height="12" viewBox="0 0 7 12" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -164,6 +164,8 @@ const Update = () => {
                     </div>
                 </form>
             </div>
+        </>
+        }
         </>
     )
 }
