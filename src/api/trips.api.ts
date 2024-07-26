@@ -1,5 +1,4 @@
 import instance from "./instance";
-import { ITrip } from "../interface/trip";
 
 export const getTrips = () => {
     const data = instance.get("/trips")
@@ -13,7 +12,7 @@ export const getTripsLimit = () => {
 
 
 
-export const postTrips = (data: ITrip) => {  
+export const postTrips = (data: any) => {  
     return instance.post("/trips",data)
 }
 
@@ -23,7 +22,7 @@ export const getTripById = (id: string|number) => {
 }
 
 
-export const putTrip = (id: string|number,data: ITrip) => {
+export const putTrip = (id:any,data: any) => {
     return instance.put(`/trips/${id}`,data) 
 }
 

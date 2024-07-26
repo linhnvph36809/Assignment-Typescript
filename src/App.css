@@ -1,77 +1,65 @@
-header{
-  background-color: #2474E5;
+header {
+    background-color: #2474e5;
 }
 
-.banner>img{
-  height: 480px;
-  object-fit: cover;
+.banner > img {
+    height: 480px;
+    object-fit: cover;
 }
 
-/* .banner .search{
-  width: 1016px;
-} */
-
-
-/* .banner .search img{
-  width: 24px;
-} */
-
-.search__active{
-    color: #2474E5;
+.search__active {
+    color: #2474e5 !important;
     font-size: 16px;
-    font-weight: 600;
-    border-bottom: 3px solid #2474E5;
+    font-weight: 700 !important;
+    border-bottom: 2px solid #2474e5;
 }
 
-.search .place{
-  border:1px solid #E0E0E0
+.search__active > .icon-search {
+    fill: #2474e5 !important;
 }
 
-.search .place>div{
-  border-left: 1px solid ;
-  border-left-color: #E0E0E0 ;
-
+.search .place {
+    border: 1px solid #e0e0e0;
 }
 
-.search .place>div:first-child{
-  border-left: none ;
-
+.search .place > div {
+    border-left: 1px solid;
+    border-left-color: #e0e0e0;
 }
 
-.search button{
-  background-color:#FFD333;
+.search .place > div:first-child {
+    border-left: none;
 }
 
-.banner .pod{
-  background-color: rgba(0, 0, 0, 0.5);
+.search button {
+    background-color: #ffd333;
 }
 
+.banner .pod {
+    background-color: rgba(0, 0, 0, 0.5);
+}
 
 footer .footer__content,
-.content{
-  width: 980px;
+.content {
+    width: 980px;
 }
 
-.color-brown{
-  background-color: #9E947C;
+.color-brown {
+    background-color: #9e947c;
 }
 
-.color-purple{
-  background-color: #585279;
-  
+.color-purple {
+    background-color: #585279;
 }
 
-.color-red{
-  background-color: #C6324E;
-  
+.color-red {
+    background-color: #c6324e;
 }
 
-.color-blue{
-  background-color: #4C6C8C;
-  
+.color-blue {
+    background-color: #4c6c8c;
 }
 
-.color-rgba{
-  background-color: rgba(132, 131, 131, 0.5);
-  
+.color-rgba {
+    background-color: rgba(132, 131, 131, 0.5);
 }

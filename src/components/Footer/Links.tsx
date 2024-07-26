@@ -1,5 +1,5 @@
 import Heading from "./Heading.tsx" ; 
-const Links = (props: {datas:{title:string,links:string[]},row:string}) => {
+const Links = (props: {datas:{title:string,links:string[]},row?:string}) => {
     return (
         <>
         <Heading title={props.datas.title} /> 

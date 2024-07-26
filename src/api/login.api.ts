@@ -1,5 +1,5 @@
 import instance from "./instance";
-import { ILogin } from "../interface/login";
+import { ILogin } from "../interfaces/login";
 
 export const signUp = (data:ILogin) => {
     return instance.post("/auth/register",data) ; 

@@ -1,5 +1,5 @@
 import instance from "./instance";
-import { IBooking } from "../interface/login";
+import { IBooking } from "../interfaces/login";
 export const postBooking = (datas: IBooking) => {
     return instance.post('booking',datas);
 }
